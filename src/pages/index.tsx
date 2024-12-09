@@ -3,22 +3,22 @@ import TripCard from '../components/TripCard'
 
 const trips = [
   {
-    id: 'paris',
-    title: 'Romantic Paris Getaway',
-    image: '/images/paris.jpg',
-    description: 'Experience the city of love with your special someone.'
+    id: 'vegas',
+    title: 'What Happens in Vegas',
+    image: '/images/vegas-hero.webp',
+    description: 'What happens in Vegas stays in Vegas.'
   },
   {
-    id: 'beach',
-    title: 'Relaxing Beach Retreat',
-    image: '/images/beach.jpg',
-    description: 'Unwind and rejuvenate on pristine sandy beaches.'
+    id: 'newmexico',
+    title: 'Albuquerque & Santa Fe',
+    image: '/images/nm-hero.webp',
+    description: 'Discover Adventure and Native American Culture'
   },
   {
-    id: 'mountain',
-    title: 'Mountain Adventure',
-    image: '/images/mountain.jpg',
-    description: 'Embark on an exciting journey through breathtaking landscapes.'
+    id: 'jackson',
+    title: 'Why O Ming!',
+    image: '/images/wy-hero.jpg',
+    description: 'Weekend Getaway in Jackson Hole'
   }
 ]
 
