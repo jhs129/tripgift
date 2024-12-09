@@ -5,8 +5,8 @@ import Link from 'next/link'
 import { FaArrowLeft } from 'react-icons/fa'
 
 const trips = {
-  paris: {
-    title: 'Romantic Paris Getaway',
+  vegas: {
+    title: 'What Happens in Vegas',
     flight: {
       departure: 'Friday, 8:00 AM',
       arrival: 'Friday, 3:00 PM',
@@ -23,7 +23,7 @@ const trips = {
       'Dinner at a Michelin-starred restaurant'
     ]
   },
-  beach: {
+  newmexico: {
     title: 'Relaxing Beach Retreat',
     flight: {
       departure: 'Friday, 10:00 AM',
@@ -41,7 +41,7 @@ const trips = {
       'Beachfront dinner under the stars'
     ]
   },
-  mountain: {
+  jackson: {
     title: 'Mountain Adventure',
     flight: {
       departure: 'Friday, 7:00 AM',

@@ -1,26 +1,7 @@
 import Layout from '../components/Layout'
 import TripCard from '../components/TripCard'
+import { trips } from '../content/trips'
 
-const trips = [
-  {
-    id: 'vegas',
-    title: 'What Happens in Vegas',
-    image: '/images/vegas-hero.webp',
-    description: 'What happens in Vegas stays in Vegas.'
-  },
-  {
-    id: 'newmexico',
-    title: 'Albuquerque & Santa Fe',
-    image: '/images/nm-hero.webp',
-    description: 'Discover Adventure and Native American Culture'
-  },
-  {
-    id: 'jackson',
-    title: 'Why O Ming!',
-    image: '/images/wy-hero.jpg',
-    description: 'Weekend Getaway in Jackson Hole'
-  }
-]
 
 export default function Home() {
   return (
