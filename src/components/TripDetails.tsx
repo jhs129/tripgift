@@ -98,50 +98,6 @@ export default function TripDetails({
       <div className="bg-light rounded-lg shadow-md p-6">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-2xl font-semibold flex items-center font-christmas">
-            <FaPlane className="mr-2" /> Flight Information
-          </h2>
-          <div className="text-xl font-semibold text-primary hidden">
-            ${formatPrice(flights.price)}
-          </div>
-        </div>
-
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-24">
-          <div>
-            <h3 className="text-xl font-medium mb-2">Outbound Flight</h3>
-            <p>
-              <strong>Departure:</strong> {flights.outbound.departure}
-            </p>
-            <p>
-              <strong>Arrival:</strong> {flights.outbound.arrival}
-            </p>
-            <p>
-              <strong>Airline:</strong> {flights.outbound.airline}
-            </p>
-            <p>
-              <strong>Flight Number:</strong> {flights.outbound.flightNumber}
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-medium mb-2">Return Flight</h3>
-            <p>
-              <strong>Departure:</strong> {flights.return.departure}
-            </p>
-            <p>
-              <strong>Arrival:</strong> {flights.return.arrival}
-            </p>
-            <p>
-              <strong>Airline:</strong> {flights.return.airline}
-            </p>
-            <p>
-              <strong>Flight Number:</strong> {flights.return.flightNumber}
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="bg-light rounded-lg shadow-md p-6">
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-semibold flex items-center font-christmas">
             <FaHotel className="mr-2" /> Hotel
           </h2>
           <div className="text-xl font-semibold text-primary hidden">
@@ -203,14 +159,54 @@ export default function TripDetails({
         </div>
       </div>
       <div className="bg-light rounded-lg shadow-md p-6">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-2xl font-semibold flex items-center font-christmas">
+            <FaPlane className="mr-2" /> Flight Information
+          </h2>
+          <div className="text-xl font-semibold text-primary hidden">
+            ${formatPrice(flights.price)}
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-24">
+          <div>
+            <h3 className="text-xl font-medium mb-2">Outbound Flight</h3>
+            <p>
+              <strong>Departure:</strong> {flights.outbound.departure}
+            </p>
+            <p>
+              <strong>Arrival:</strong> {flights.outbound.arrival}
+            </p>
+            <p>
+              <strong>Airline:</strong> {flights.outbound.airline}
+            </p>
+            <p>
+              <strong>Flight Number:</strong> {flights.outbound.flightNumber}
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-medium mb-2">Return Flight</h3>
+            <p>
+              <strong>Departure:</strong> {flights.return.departure}
+            </p>
+            <p>
+              <strong>Arrival:</strong> {flights.return.arrival}
+            </p>
+            <p>
+              <strong>Airline:</strong> {flights.return.airline}
+            </p>
+            <p>
+              <strong>Flight Number:</strong> {flights.return.flightNumber}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="bg-light rounded-lg shadow-md p-6">
         <h2 className="text-2xl font-semibold mb-4 flex items-center font-christmas">
           <FaListUl className="mr-2" /> Key Activities
         </h2>
-        <div className="max-w-3xl mx-auto">
-          <Slider 
-            {...sliderSettings} 
-            ref={activitiesSlider}
-          >
+        <div className="max-w-3xl mx-auto lg:max-w-full">
+          <Slider {...sliderSettings} ref={activitiesSlider}>
             {activities.map((activity, index) => (
               <div 
                 key={index} 
