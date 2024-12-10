@@ -16,6 +16,7 @@ interface HotelInfo {
   description: string
   link: string
   image: string
+  price: string
 }
 
 interface ActivityInfo {
@@ -29,12 +30,22 @@ interface TripDetailsProps {
   flights: {
     outbound: FlightInfo
     return: FlightInfo
+    price: string
   }
   hotel: HotelInfo
   activities: ActivityInfo[]
 }
 
 export default function TripDetails({ title, image, flights, hotel, activities }: TripDetailsProps) {
+  const totalPrice = (parseFloat(flights.price) || 0) + (parseFloat(hotel.price) || 0)
+
+  const formatPrice = (price: string) => {
+    return parseFloat(price || '0').toLocaleString('en-US', { 
+      minimumFractionDigits: 2, 
+      maximumFractionDigits: 2 
+    })
+  }
+
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -57,12 +68,20 @@ export default function TripDetails({ title, image, flights, hotel, activities }
         <h1 className="absolute bottom-6 left-6 text-4xl font-bold text-white">
           {title}
         </h1>
+        <div className="absolute bottom-6 right-6 text-2xl font-bold text-white">
+          Total: ${totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+        </div>
       </div>
 
       <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-2xl font-semibold mb-4 flex items-center">
-          <FaPlane className="mr-2" /> Flight Information
-        </h2>
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-2xl font-semibold flex items-center">
+            <FaPlane className="mr-2" /> Flight Information
+          </h2>
+          <div className="text-xl font-semibold text-green-700">
+            ${formatPrice(flights.price)}
+          </div>
+        </div>
         
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-24">
           <div>
@@ -83,9 +102,14 @@ export default function TripDetails({ title, image, flights, hotel, activities }
         </div>
       </div>
       <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-2xl font-semibold mb-4 flex items-center">
-          <FaHotel className="mr-2" /> Hotel
-        </h2>
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-2xl font-semibold flex items-center">
+            <FaHotel className="mr-2" /> Hotel
+          </h2>
+          <div className="text-xl font-semibold text-green-700">
+            ${formatPrice(hotel.price)}
+          </div>
+        </div>
         <div className="flex flex-col md:flex-row gap-6">
           <div className="md:w-1/2">
             <div className="relative  rounded-lg overflow-hidden">
@@ -97,7 +121,17 @@ export default function TripDetails({ title, image, flights, hotel, activities }
             </div>
           </div>
           <div className="md:w-1/2">
-            <p><strong>Name:</strong> {hotel.name}</p>
+            <p>
+              <strong>Name:</strong>{' '}
+              <a 
+                href={hotel.link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                {hotel.name}
+              </a>
+            </p>
             <p><strong>Address:</strong> {hotel.address}</p>
             <p><strong>Description:</strong> {hotel.description}</p>
           </div>
