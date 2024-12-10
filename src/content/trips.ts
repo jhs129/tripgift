@@ -25,7 +25,7 @@ export const trips = [
         address: '3600 S Las Vegas Blvd, Las Vegas, NV 89109, United States',
         description: 'Inspired by Lake Como, Bellagio, a Luxury Collection Resort & Casino, Las Vegas overlooks a Mediterranean-blue lake with fountains performing a magnificent ballet. Stay in luxurious remodeled rooms and suites, marvel at the magical sights, sounds, and scents of the festive season at the Conservatory, and wander through paintings and sculptures by the world\'s most influential artists at the Bellagio Gallery of Fine Art. Enjoy the elegance of "O" by Cirque du Soleil, which is magical and breathtaking. Indulge your tastebuds with the timeless flair of world-class dining at PRIME or Le Cirque. Dine with a fountain view by award-winning chefs at LAGO by Julian Serrano and Spago by Wolfgang Puck.',
         image: '/images/vegas-hotel-hero.jpg',
-        price: '1000.00'
+        price: '1209.00'
       },
       activities: [
         {
@@ -76,7 +76,7 @@ export const trips = [
         address: '1300 Tuyuna Trail, Santa Ana Pueblo, NM 87504, United States',
         description: 'Step into serenity at Hyatt Regency Tamaya Resort & Spa. Situated on the foothills of the Sandia Mountains and Santa Ana Pueblo, our resort is a year-round destination in the Land of Enchantment. Immerse yourself in the stunning natural beauty of The Bosque’s cottonwood forests when you explore hiking trails along the Rio Grande, go horseback riding near ancient petroglyphs, or enjoy an afternoon in a hot air balloon. Learn about Pueblo culture from local tribal members at our on-site Native American Cultural Center. After a day of adventure, savor New Mexican cuisine at multiple on-site restaurants, indulge in a relaxing treatment at Tamaya Mist Spa, or play a round of golf at the course next door.',
         image: '/images/nm-hotel-hero.webp',
-        price: '1000.00'
+        price: '1206.00'
       },
       activities: [
         {
