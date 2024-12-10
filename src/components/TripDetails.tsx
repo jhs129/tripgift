@@ -16,7 +16,7 @@ interface HotelInfo {
   address: string;
   description: string;
   link: string;
-  image: string;
+  images: string[];
   price: string;
 }
 
@@ -146,14 +146,29 @@ export default function TripDetails({
         </div>
         <div className="flex flex-col md:flex-row gap-6">
           <div className="md:w-1/2">
-            <div className="relative h-[300px] rounded-lg overflow-hidden">
-              <Image
-                src={hotel.image}
-                alt={hotel.name}
-                fill
-                className="object-cover"
-              />
-            </div>
+            {hotel.images.length > 1 ? (
+              <Slider {...sliderSettings}>
+                {hotel.images.map((image, index) => (
+                  <div key={index} className="relative h-[300px]">
+                    <Image
+                      src={image}
+                      alt={`${hotel.name} - Image ${index + 1}`}
+                      fill
+                      className="object-cover rounded-lg"
+                    />
+                  </div>
+                ))}
+              </Slider>
+            ) : (
+              <div className="relative h-[300px] rounded-lg overflow-hidden">
+                <Image
+                  src={hotel.images[0]}
+                  alt={hotel.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            )}
           </div>
           <div className="md:w-1/2">
             <p>

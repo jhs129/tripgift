@@ -24,7 +24,12 @@ export const trips = [
         link: 'https://www.marriott.com/en-us/hotels/lasbl-bellagio-a-luxury-collection-resort-and-casino-las-vegas/overview/',
         address: '3600 S Las Vegas Blvd, Las Vegas, NV 89109, United States',
         description: 'Inspired by Lake Como, Bellagio, a Luxury Collection Resort & Casino, Las Vegas overlooks a Mediterranean-blue lake with fountains performing a magnificent ballet. Stay in luxurious remodeled rooms and suites, marvel at the magical sights, sounds, and scents of the festive season at the Conservatory, and wander through paintings and sculptures by the world\'s most influential artists at the Bellagio Gallery of Fine Art. Enjoy the elegance of "O" by Cirque du Soleil, which is magical and breathtaking. Indulge your tastebuds with the timeless flair of world-class dining at PRIME or Le Cirque. Dine with a fountain view by award-winning chefs at LAGO by Julian Serrano and Spago by Wolfgang Puck.',
-        image: '/images/vegas-hotel-hero.jpg',
+        images: [
+          '/images/vegas-hotel-hero.jpg',
+          '/images/hotels/vegas/image3.jpeg',
+          '/images/hotels/vegas/image2.webp',
+          '/images/hotels/vegas/image4.jpeg',
+        ],
         price: '1209.00'
       },
       activities: [
@@ -75,7 +80,11 @@ export const trips = [
         link: 'https://www.hyatt.com/hyatt-regency/en-US/tamay-hyatt-regency-tamaya-resort-and-spa',
         address: '1300 Tuyuna Trail, Santa Ana Pueblo, NM 87504, United States',
         description: 'Step into serenity at Hyatt Regency Tamaya Resort & Spa. Situated on the foothills of the Sandia Mountains and Santa Ana Pueblo, our resort is a year-round destination in the Land of Enchantment. Immerse yourself in the stunning natural beauty of The Bosque’s cottonwood forests when you explore hiking trails along the Rio Grande, go horseback riding near ancient petroglyphs, or enjoy an afternoon in a hot air balloon. Learn about Pueblo culture from local tribal members at our on-site Native American Cultural Center. After a day of adventure, savor New Mexican cuisine at multiple on-site restaurants, indulge in a relaxing treatment at Tamaya Mist Spa, or play a round of golf at the course next door.',
-        image: '/images/nm-hotel-hero.webp',
+        images: [
+          '/images/nm-hotel-hero.webp',
+          '/images/nm-hotel-2.jpg',
+          '/images/nm-hotel-3.jpg'
+        ],
         price: '1206.00'
       },
       activities: [
@@ -122,7 +131,11 @@ export const trips = [
         link: 'https://www.marriott.com/en-us/hotels/jacsh-springhill-suites-jackson-hole/overview/',
         address: '150 West Simpson Avenue, Jackson, WY 83001, United States',
         description: 'Centrally located in beautiful downtown Jackson, SpringHill Suites Jackson Hole stands as a modern destination in a historic town. Stay just steps from downtown shops, shows, restaurants and bars, while knowing Grand Teton National Park and Yellowstone National Park are each just a short drive away. During your time at our hotel in downtown Jackson, WY, you can enjoy sleek communal spaces including our spacious lobby and dining area for enjoying our complimentary breakfast buffet, serving hot and cold morning favorites. You can also utilize a 24-hour fitness center, outdoor pool and hot tub for a rejuvenating time in between daily adventures. Those planning to stay in town for an extended time will appreciate on-site laundry services as well as complimentary high-speed Wi-Fi throughout our rooms and public spaces. Great for groups getting together in Jackson, Wyoming, we boast 1,500 square feet of flexible meeting rooms, arranged to your liking. Set yourself up for success at SpringHill Suites Jackson Hole',
-        image: '/images/wy-hotel-hero.webp',
+        images: [
+          '/images/wy-hotel-hero.webp',
+          '/images/hotels/wy/image2.jpeg',
+          '/images/hotels/wy/image4.webp',
+        ],
         price: '927.00'
       },
       activities: [

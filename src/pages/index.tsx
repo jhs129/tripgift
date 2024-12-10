@@ -11,7 +11,9 @@ export default function Home() {
   
   useEffect(() => {
     const currentDate = new Date()
-    if (currentDate >= RELEASE_DATE) {
+    const storedAuth = localStorage.getItem('isAuthorized') === 'true'
+    
+    if (currentDate >= RELEASE_DATE || storedAuth) {
       setIsAuthorized(true)
     }
   }, [RELEASE_DATE])
@@ -26,6 +28,7 @@ export default function Home() {
     e.preventDefault()
     if (password === 'doop') {
       setIsAuthorized(true)
+      localStorage.setItem('isAuthorized', 'true')
     }
   }
 
