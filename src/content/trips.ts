@@ -27,10 +27,11 @@ export const trips = [
         image: '/images/vegas-hotel-hero.jpg'
       },
       activities: [
-        'Visit the Eiffel Tower',
-        'Explore the Louvre Museum',
-        'Romantic Seine River cruise',
-        'Dinner at a Michelin-starred restaurant'
+        "Admire the Bellagio's iconic Fountains and seasonal Conservatory & Botanical Gardens",
+        "Experience a fine dining meal at one of the Bellagio’s signature restaurants (e.g., Picasso or Michael Mina)",
+        "Attend the Cirque du Soleil 'O' show at the Bellagio",
+        "Try your luck at the Bellagio’s world-class casino and sportsbook, especially during March Madness",
+        "Take a helicopter tour of the Las Vegas Strip or a day excursion to the Hoover Dam"
       ]
     },
     {
@@ -60,12 +61,12 @@ export const trips = [
         description: 'Step into serenity at Hyatt Regency Tamaya Resort & Spa. Situated on the foothills of the Sandia Mountains and Santa Ana Pueblo, our resort is a year-round destination in the Land of Enchantment. Immerse yourself in the stunning natural beauty of The Bosque’s cottonwood forests when you explore hiking trails along the Rio Grande, go horseback riding near ancient petroglyphs, or enjoy an afternoon in a hot air balloon. Learn about Pueblo culture from local tribal members at our on-site Native American Cultural Center. After a day of adventure, savor New Mexican cuisine at multiple on-site restaurants, indulge in a relaxing treatment at Tamaya Mist Spa, or play a round of golf at the course next door.',
         image: '/images/nm-hotel-hero.webp'
       },
-      activities: [
-        'Tamaya Mist Spa',
-        'The Stables at Tamaya',
-        'Explore Albuquerque and Santa Fe',
-        'Fly Fishing on the Rio Grande',
-        'Skiing at Sandia Peak Ski Area'
+      "activities": [
+        "Indulge in a rejuvenating treatment at the Tamaya Mist Spa & Salon",
+        "Enjoy a guided horseback ride along the Rio Grande trails",
+        "Participate in a Native American cultural experience or artisan workshop on-site",
+        "Explore nearby Santa Fe’s historic Plaza, art galleries, and dining scene",
+        "Take a hot air balloon ride over the Rio Grande Valley for stunning desert views"
       ]
     },
     {
@@ -96,11 +97,12 @@ export const trips = [
         image: '/images/wy-hotel-hero.webp',
         price: '927.00'
       },
-      activities: [
-        'Visit the Eiffel Tower',
-        'Explore the Louvre Museum',
-        'Romantic Seine River cruise',
-        'Dinner at a Michelin-starred restaurant'
+      "activities": [
+        "Late-season Skiing at Jackson Hole Mountain Resort",
+        "Snowshoeing or Cross-country Skiing in Grand Teton National Park",
+        "Taking a Winter Sleigh Ride through the National Elk Refuge",
+        "Experiencing a Snowcoach Tour in Yellowstone National Park",
+        "Enjoying Après-ski Dining and Nightlife in Jackson"
       ]
     }
   ]

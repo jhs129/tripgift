@@ -16,7 +16,7 @@ export default function Layout({ children }: LayoutProps) {
         {children}
       </main>
       <footer className="bg-gray-800 text-white text-center py-4">
-        <p>&copy; 2023 Weekend Trips Gift. All rights reserved.</p>
+        <p>&copy; 2024 Doop Christmas Vacations Limited. All rights reserved.</p>
       </footer>
     </>
   )
