@@ -9,8 +9,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "var(--christmas-green)",
+        secondary: "var(--christmas-red)",
+        accent: "var(--christmas-gold)",
+        background: "var(--snow-white)",
+        "background-alt": "var(--pine-dark)",
+        foreground: "var(--pine-dark)",
+        "foreground-alt": "var(--snow-white)",
+      },
+      borderColor: {
+        DEFAULT: "var(--christmas-gold)",
       },
     },
   },

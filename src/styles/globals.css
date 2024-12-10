@@ -2,6 +2,14 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+:root {
+  --christmas-red: #D42426;
+  --christmas-green: #165B33;
+  --christmas-gold: #FFD700;
+  --snow-white: #FFFAFA;
+  --pine-dark: #0B3B24;
+}
+
 body {
   font-family: 'Arial', sans-serif;
 }

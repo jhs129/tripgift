@@ -12,7 +12,7 @@ interface TripCardProps {
 export default function TripCard({ id, title, image, description, totalPrice }: TripCardProps) {
   return (
     <Link href={`/trip/${id}`} className="block">
-      <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+      <div className="bg-background rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 border">
         <div className="relative h-48">
           <Image
             src={image}
@@ -22,9 +22,9 @@ export default function TripCard({ id, title, image, description, totalPrice }: 
           />
         </div>
         <div className="p-4">
-          <h2 className="text-xl font-semibold mb-2">{title}</h2>
-          <p className="text-gray-600 mb-2">{description}</p>
-          <p className="text-lg font-semibold text-blue-600">
+          <h2 className="text-xl font-semibold mb-2 text-primary">{title}</h2>
+          <p className="text-foreground mb-2">{description}</p>
+          <p className="text-lg font-semibold text-secondary">
             ${totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </p>
         </div>

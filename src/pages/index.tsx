@@ -12,7 +12,9 @@ export default function Home() {
   return (
     <Layout>
       <div className="space-y-8">
-        <h1 className="text-4xl font-bold text-center">Choose Your Adventure</h1>
+        <h1 className="text-4xl font-bold text-center text-primary">
+          Choose Your Adventure
+        </h1>
         <div className="grid gap-6 md:grid-cols-3">
           {trips.map((trip) => (
             <TripCard 
