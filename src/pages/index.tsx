@@ -11,7 +11,9 @@ export default function Home() {
   
   useEffect(() => {
     const currentDate = new Date()
-    if (currentDate >= RELEASE_DATE) {
+    const storedAuth = localStorage.getItem('isAuthorized') === 'true'
+    
+    if (currentDate >= RELEASE_DATE || storedAuth) {
       setIsAuthorized(true)
     }
   }, [RELEASE_DATE])
@@ -26,6 +28,7 @@ export default function Home() {
     e.preventDefault()
     if (password === 'doop') {
       setIsAuthorized(true)
+      localStorage.setItem('isAuthorized', 'true')
     }
   }
 
@@ -34,7 +37,7 @@ export default function Home() {
       <Layout>
         <div className="space-y-8 text-center">
           <h1 className="text-4xl font-bold text-primary">
-         Go back to sleep, Santa is not hear yet! 🎅
+         Silly Boopadoop, go back to sleep! Santa is not here yet! 🎅
           </h1>
           <p className="text-xl">Come back on Christmas Day or enter the double secret password:</p>
           
@@ -62,13 +65,12 @@ export default function Home() {
     <Layout>
       <div className="space-y-8">
         <h1 className="text-4xl font-bold text-center text-primary font-christmas">
-          Ok, it&apos;s time for the presents, I mean pressence!
+          Ok, it&apos;s time for the pressence!
         </h1>
         <div className="text-xl text-center font-christmas">
-          <p>Open this gift with that glint in your eye,
-          pick your perfect weekend, and get ready to fly!
-          Three chances at &ldquo;badulting,&rdquo; just you wait you&apos;ll and see</p>
-          <p>Just choose your favorite weekend to spend with me!</p>
+          <p>Open each gift with that glint in your eye,
+          pick perfect present, and get ready to fly!
+          Three choices of badulting with your favorite guy!</p>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
           {trips.map((trip) => (
