@@ -68,10 +68,9 @@ export default function Home() {
           Ok, it&apos;s time for the presents, I mean pressence!
         </h1>
         <div className="text-xl text-center font-christmas">
-          <p>Open this gift with that glint in your eye,
-          pick your perfect weekend, and get ready to fly!
-          Three chances at &ldquo;badulting,&rdquo; just you wait you&apos;ll and see</p>
-          <p>Just choose your favorite weekend to spend with me!</p>
+          <p>Open each gift with that glint in your eye,
+          pick perfect present, and get ready to fly!
+          Three choices of badulting with your favorite guy!</p>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
           {trips.map((trip) => (
