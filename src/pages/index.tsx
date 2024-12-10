@@ -37,7 +37,7 @@ export default function Home() {
       <Layout>
         <div className="space-y-8 text-center">
           <h1 className="text-4xl font-bold text-primary">
-         Go back to sleep, Santa is not hear yet! 🎅
+         Silly Boopadoop, go back to sleep! Santa is not here yet! 🎅
           </h1>
           <p className="text-xl">Come back on Christmas Day or enter the double secret password:</p>
           
