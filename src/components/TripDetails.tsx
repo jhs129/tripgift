@@ -84,7 +84,7 @@ export default function TripDetails({
             <h1 className="text-4xl font-bold text-light font-christmas">
               {title}
             </h1>
-            <div className="text-2xl font-bold text-light whitespace-nowrap">
+            <div className="hiddentext-2xl font-bold text-light whitespace-nowra hidden">
               Total: $
               {totalPrice.toLocaleString("en-US", {
                 minimumFractionDigits: 2,
@@ -100,7 +100,7 @@ export default function TripDetails({
           <h2 className="text-2xl font-semibold flex items-center font-christmas">
             <FaPlane className="mr-2" /> Flight Information
           </h2>
-          <div className="text-xl font-semibold text-primary">
+          <div className="text-xl font-semibold text-primary hidden">
             ${formatPrice(flights.price)}
           </div>
         </div>
@@ -144,7 +144,7 @@ export default function TripDetails({
           <h2 className="text-2xl font-semibold flex items-center font-christmas">
             <FaHotel className="mr-2" /> Hotel
           </h2>
-          <div className="text-xl font-semibold text-primary">
+          <div className="text-xl font-semibold text-primary hidden">
             ${formatPrice(hotel.price)}
           </div>
         </div>

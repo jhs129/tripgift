@@ -52,7 +52,7 @@ export default function TripCard({ id, title, image, description, totalPrice }: 
         <div className="p-4 font-raleway">
           <h2 className="text-2xl font-semibold mb-2 text-primary font-christmas">{title}</h2>
           <p className="text-foreground mb-2 text-xl">{description}</p>
-          <p className="text-lg font-semibold text-secondary">
+          <p className="text-lg font-semibold text-secondary hidden">
             ${totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </p>
         </div>
