@@ -82,8 +82,14 @@ export const trips = [
         description: 'Step into serenity at Hyatt Regency Tamaya Resort & Spa. Situated on the foothills of the Sandia Mountains and Santa Ana Pueblo, our resort is a year-round destination in the Land of Enchantment. Immerse yourself in the stunning natural beauty of The Bosque’s cottonwood forests when you explore hiking trails along the Rio Grande, go horseback riding near ancient petroglyphs, or enjoy an afternoon in a hot air balloon. Learn about Pueblo culture from local tribal members at our on-site Native American Cultural Center. After a day of adventure, savor New Mexican cuisine at multiple on-site restaurants, indulge in a relaxing treatment at Tamaya Mist Spa, or play a round of golf at the course next door.',
         images: [
           '/images/nm-hotel-hero.webp',
-          '/images/nm-hotel-2.jpg',
-          '/images/nm-hotel-3.jpg'
+          '/images/hotels/nm/image1.webp',
+          '/images/hotels/nm/image2.webp',
+          '/images/hotels/nm/image3.webp',
+          '/images/hotels/nm/image4.webp',
+          '/images/hotels/nm/image5.webp',
+          '/images/hotels/nm/image6.webp',  
+          '/images/hotels/nm/spa.webp', 
+          '/images/hotels/nm/culture.webp'
         ],
         price: '1206.00'
       },

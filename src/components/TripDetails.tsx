@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import { useRef } from "react";
 
 interface FlightInfo {
   departure: string;
@@ -63,6 +64,9 @@ export default function TripDetails({
     arrows: true,
     swipe: true,
   };
+
+  const hotelSlider = useRef<Slider | null>(null);
+  const activitiesSlider = useRef<Slider | null>(null);
 
   return (
     <div className="space-y-8">
@@ -147,9 +151,16 @@ export default function TripDetails({
         <div className="flex flex-col md:flex-row gap-6">
           <div className="md:w-1/2">
             {hotel.images.length > 1 ? (
-              <Slider {...sliderSettings}>
+              <Slider 
+                {...sliderSettings} 
+                ref={hotelSlider}
+              >
                 {hotel.images.map((image, index) => (
-                  <div key={index} className="relative h-[300px]">
+                  <div 
+                    key={index} 
+                    className="relative h-[300px] cursor-pointer"
+                    onClick={() => hotelSlider.current?.slickNext()}
+                  >
                     <Image
                       src={image}
                       alt={`${hotel.name} - Image ${index + 1}`}
@@ -196,9 +207,16 @@ export default function TripDetails({
           <FaListUl className="mr-2" /> Key Activities
         </h2>
         <div className="max-w-3xl mx-auto">
-          <Slider {...sliderSettings}>
+          <Slider 
+            {...sliderSettings} 
+            ref={activitiesSlider}
+          >
             {activities.map((activity, index) => (
-              <div key={index} className="px-2">
+              <div 
+                key={index} 
+                className="px-2 cursor-pointer"
+                onClick={() => activitiesSlider.current?.slickNext()}
+              >
                 <div className="relative aspect-w-16 aspect-h-9 mb-4 h-[300px]">
                   <Image
                     src={activity.image}
