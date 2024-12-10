@@ -1,51 +1,58 @@
-import { FaPlane, FaHotel, FaListUl } from 'react-icons/fa'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import Image from 'next/image'
+import { FaPlane, FaHotel, FaListUl } from "react-icons/fa";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 interface FlightInfo {
-  departure: string
-  arrival: string
-  airline: string
-  flightNumber: string
+  departure: string;
+  arrival: string;
+  airline: string;
+  flightNumber: string;
 }
 
 interface HotelInfo {
-  name: string
-  address: string
-  description: string
-  link: string
-  image: string
-  price: string
+  name: string;
+  address: string;
+  description: string;
+  link: string;
+  image: string;
+  price: string;
 }
 
 interface ActivityInfo {
-  text: string
-  image: string
+  text: string;
+  image: string;
 }
 
 interface TripDetailsProps {
-  title: string
-  image: string
+  title: string;
+  image: string;
   flights: {
-    outbound: FlightInfo
-    return: FlightInfo
-    price: string
-  }
-  hotel: HotelInfo
-  activities: ActivityInfo[]
+    outbound: FlightInfo;
+    return: FlightInfo;
+    price: string;
+  };
+  hotel: HotelInfo;
+  activities: ActivityInfo[];
 }
 
-export default function TripDetails({ title, image, flights, hotel, activities }: TripDetailsProps) {
-  const totalPrice = (parseFloat(flights.price) || 0) + (parseFloat(hotel.price) || 0)
+export default function TripDetails({
+  title,
+  image,
+  flights,
+  hotel,
+  activities,
+}: TripDetailsProps) {
+  const totalPrice =
+    (parseFloat(flights.price) || 0) + (parseFloat(hotel.price) || 0);
 
   const formatPrice = (price: string) => {
-    return parseFloat(price || '0').toLocaleString('en-US', { 
-      minimumFractionDigits: 2, 
-      maximumFractionDigits: 2 
-    })
-  }
+    return parseFloat(price || "0").toLocaleString("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+  };
 
   const sliderSettings = {
     dots: true,
@@ -55,7 +62,7 @@ export default function TripDetails({ title, image, flights, hotel, activities }
     slidesToScroll: 1,
     arrows: true,
     swipe: true,
-  }
+  };
 
   return (
     <div className="space-y-8">
@@ -68,11 +75,19 @@ export default function TripDetails({ title, image, flights, hotel, activities }
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-lg" />
-        <h1 className="absolute bottom-6 left-6 text-4xl font-bold text-light">
-          {title}
-        </h1>
-        <div className="absolute bottom-6 right-6 text-2xl font-bold text-light">
-          Total: ${totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+        <div className="absolute bottom-6 left-6 right-6">
+          <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center gap-2">
+            <h1 className="text-4xl font-bold text-light font-christmas">
+              {title}
+            </h1>
+            <div className="text-2xl font-bold text-light whitespace-nowrap">
+              Total: $
+              {totalPrice.toLocaleString("en-US", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}
+            </div>
+          </div>
         </div>
       </div>
 
@@ -85,22 +100,38 @@ export default function TripDetails({ title, image, flights, hotel, activities }
             ${formatPrice(flights.price)}
           </div>
         </div>
-        
+
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-24">
           <div>
             <h3 className="text-xl font-medium mb-2">Outbound Flight</h3>
-            <p><strong>Departure:</strong> {flights.outbound.departure}</p>
-            <p><strong>Arrival:</strong> {flights.outbound.arrival}</p>
-            <p><strong>Airline:</strong> {flights.outbound.airline}</p>
-            <p><strong>Flight Number:</strong> {flights.outbound.flightNumber}</p>
+            <p>
+              <strong>Departure:</strong> {flights.outbound.departure}
+            </p>
+            <p>
+              <strong>Arrival:</strong> {flights.outbound.arrival}
+            </p>
+            <p>
+              <strong>Airline:</strong> {flights.outbound.airline}
+            </p>
+            <p>
+              <strong>Flight Number:</strong> {flights.outbound.flightNumber}
+            </p>
           </div>
-          
+
           <div>
             <h3 className="text-xl font-medium mb-2">Return Flight</h3>
-            <p><strong>Departure:</strong> {flights.return.departure}</p>
-            <p><strong>Arrival:</strong> {flights.return.arrival}</p>
-            <p><strong>Airline:</strong> {flights.return.airline}</p>
-            <p><strong>Flight Number:</strong> {flights.return.flightNumber}</p>
+            <p>
+              <strong>Departure:</strong> {flights.return.departure}
+            </p>
+            <p>
+              <strong>Arrival:</strong> {flights.return.arrival}
+            </p>
+            <p>
+              <strong>Airline:</strong> {flights.return.airline}
+            </p>
+            <p>
+              <strong>Flight Number:</strong> {flights.return.flightNumber}
+            </p>
           </div>
         </div>
       </div>
@@ -126,18 +157,22 @@ export default function TripDetails({ title, image, flights, hotel, activities }
           </div>
           <div className="md:w-1/2">
             <p>
-              <strong>Name:</strong>{' '}
-              <a 
-                href={hotel.link} 
-                target="_blank" 
+              <strong>Name:</strong>{" "}
+              <a
+                href={hotel.link}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-secondary hover:text-primary underline"
               >
                 {hotel.name}
               </a>
             </p>
-            <p><strong>Address:</strong> {hotel.address}</p>
-            <p><strong>Description:</strong> {hotel.description}</p>
+            <p>
+              <strong>Address:</strong> {hotel.address}
+            </p>
+            <p>
+              <strong>Description:</strong> {hotel.description}
+            </p>
           </div>
         </div>
       </div>
@@ -164,6 +199,5 @@ export default function TripDetails({ title, image, flights, hotel, activities }
         </div>
       </div>
     </div>
-  )
+  );
 }
-

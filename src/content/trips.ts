@@ -3,7 +3,7 @@ export const trips = [
       id: 'vegas',
       title: 'What Happens in Vegas',
       image: '/images/vegas-hero.webp',
-      description: 'What happens in Vegas stays in Vegas.',
+      description: '...stays in Vegas.',
       flights: {
         outbound: {
           departure: 'Friday March 14, 2025 11:15 AM',
@@ -54,7 +54,7 @@ export const trips = [
       id: 'newmexico',
       title: 'New Mexico Spicy Tacos',
       image: '/images/nm-hero.webp',
-      description: 'Discover Adventure and Native American Culture',
+      description: 'Spice mommy, spice...',
       flights: {
         outbound: {
             departure: 'Friday March 14, 2025 1:59 PM',
@@ -101,7 +101,7 @@ export const trips = [
       id: 'jackson',
       title: 'Why O Ming!',
       image: '/images/wy-hero.jpg',
-      description: 'Weekend Getaway in Jackson Hole',
+      description: "Let's get Jolly Jack...son Hole!",
       flights: {
         outbound: {
             departure: 'Friday March 14, 2025 11:20 AM',
