@@ -65,7 +65,7 @@ export default function Home() {
     <Layout>
       <div className="space-y-8">
         <h1 className="text-4xl font-bold text-center text-primary font-christmas">
-          Ok, it&apos;s time for the presents, I mean pressence!
+          Ok, it&apos;s time for the pressence!
         </h1>
         <div className="text-xl text-center font-christmas">
           <p>Open each gift with that glint in your eye,
