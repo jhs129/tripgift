@@ -2,6 +2,7 @@ import { FaPlane, FaHotel, FaListUl } from 'react-icons/fa'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import Image from 'next/image'
 
 interface FlightInfo {
   departure: string
@@ -59,10 +60,12 @@ export default function TripDetails({ title, image, flights, hotel, activities }
   return (
     <div className="space-y-8">
       <div className="relative w-full h-[400px]">
-        <img
+        <Image
           src={image}
           alt={title}
-          className="w-full h-full object-cover rounded-lg"
+          fill
+          className="object-cover rounded-lg"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-lg" />
         <h1 className="absolute bottom-6 left-6 text-4xl font-bold text-light">
@@ -112,11 +115,12 @@ export default function TripDetails({ title, image, flights, hotel, activities }
         </div>
         <div className="flex flex-col md:flex-row gap-6">
           <div className="md:w-1/2">
-            <div className="relative  rounded-lg overflow-hidden">
-              <img
+            <div className="relative h-[300px] rounded-lg overflow-hidden">
+              <Image
                 src={hotel.image}
                 alt={hotel.name}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
               />
             </div>
           </div>
@@ -145,11 +149,12 @@ export default function TripDetails({ title, image, flights, hotel, activities }
           <Slider {...sliderSettings}>
             {activities.map((activity, index) => (
               <div key={index} className="px-2">
-                <div className="aspect-w-16 aspect-h-9 mb-4">
-                  <img
+                <div className="relative aspect-w-16 aspect-h-9 mb-4 h-[300px]">
+                  <Image
                     src={activity.image}
                     alt={activity.text}
-                    className="w-full h-[300px] object-cover rounded-lg"
+                    fill
+                    className="object-cover rounded-lg"
                   />
                 </div>
                 <p className="text-center text-lg">{activity.text}</p>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import Layout from '../components/Layout'
 import TripCard from '../components/TripCard'
 import { trips } from '../content/trips'
@@ -6,14 +6,15 @@ import { trips } from '../content/trips'
 export default function Home() {
   const [isAuthorized, setIsAuthorized] = useState(false)
   const [password, setPassword] = useState('')
-  const RELEASE_DATE = new Date('2024-12-25')
+  
+  const RELEASE_DATE = useMemo(() => new Date('2024-12-25'), [])
   
   useEffect(() => {
     const currentDate = new Date()
     if (currentDate >= RELEASE_DATE) {
       setIsAuthorized(true)
     }
-  }, [])
+  }, [RELEASE_DATE])
 
   const calculateTotalPrice = (trip: typeof trips[0]): number => {
     const flightPrice = parseFloat(trip.flights.price) || 0
@@ -61,12 +62,14 @@ export default function Home() {
     <Layout>
       <div className="space-y-8">
         <h1 className="text-4xl font-bold text-center text-primary font-christmas">
-          Ok, it's time for the presents, I mean pressence!
+          Ok, it&apos;s time for the presents, I mean pressence!
         </h1>
-        <div className="text-xl text-center font-christmas"><p>Open this gift with that glint in your eye,
-pick your perfect weekend, and get ready to fly!
-Three chances at "badulting," just you wait you'll and see</p>
-<p>Just choose your favorite weekend to spend with me! </p></div>
+        <div className="text-xl text-center font-christmas">
+          <p>Open this gift with that glint in your eye,
+          pick your perfect weekend, and get ready to fly!
+          Three chances at &ldquo;badulting,&rdquo; just you wait you&apos;ll and see</p>
+          <p>Just choose your favorite weekend to spend with me!</p>
+        </div>
         <div className="grid gap-6 md:grid-cols-3">
           {trips.map((trip) => (
             <TripCard 
