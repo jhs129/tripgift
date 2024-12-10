@@ -52,7 +52,7 @@ export const trips = [
     },
     {
       id: 'newmexico',
-      title: 'Albuquerque & Santa Fe',
+      title: 'New Mexico Spicy Tacos',
       image: '/images/nm-hero.webp',
       description: 'Discover Adventure and Native American Culture',
       flights: {
