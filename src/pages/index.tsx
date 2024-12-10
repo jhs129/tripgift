@@ -33,9 +33,9 @@ export default function Home() {
       <Layout>
         <div className="space-y-8 text-center">
           <h1 className="text-4xl font-bold text-primary">
-            Shhh... Santa is still working! 🎅
+         Go back to sleep, Santa is not hear yet! 🎅
           </h1>
-          <p className="text-xl">Come back on Christmas Day or enter the secret password:</p>
+          <p className="text-xl">Come back on Christmas Day or enter the double secret password:</p>
           
           <form onSubmit={handlePasswordSubmit} className="max-w-sm mx-auto space-y-4">
             <input
@@ -47,7 +47,7 @@ export default function Home() {
             />
             <button
               type="submit"
-              className="px-6 py-2 text-white bg-primary rounded-md hover:bg-primary/80"
+              className="px-6 py-2 text-light bg-primary rounded-md hover:bg-primary/80"
             >
               Submit
             </button>
@@ -60,10 +60,10 @@ export default function Home() {
   return (
     <Layout>
       <div className="space-y-8">
-        <h1 className="text-4xl font-bold text-center text-primary">
+        <h1 className="text-4xl font-bold text-center text-primary font-christmas">
           Ok, it's time for the presents, I mean pressence!
         </h1>
-        <div className="text-xl text-center"><p>Open this gift with that glint in your eye,
+        <div className="text-xl text-center font-christmas"><p>Open this gift with that glint in your eye,
 pick your perfect weekend, and get ready to fly!
 Three chances at "badulting," just you wait you'll and see</p>
 <p>Just choose your favorite weekend to spend with me! </p></div>

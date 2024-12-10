@@ -8,9 +8,15 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        christmas: ['"Mountains of Christmas"', 'cursive'],
+        lora: ['Lora', 'serif'],
+        raleway: ['Raleway', 'sans-serif'],
+      },
       colors: {
         primary: "var(--christmas-green)",
         secondary: "var(--christmas-red)",
+        light: "var(--snow-white)",
         accent: "var(--christmas-gold)",
         background: "var(--snow-white)",
         "background-alt": "var(--pine-dark)",

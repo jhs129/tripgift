@@ -8,14 +8,14 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Head>
-        <title>A very Boopadoop Christmas</title>
+        <title>A Very Boopadoop Christmas</title>
         <meta name="description" content="A special gift of three weekend trips" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="min-h-screen flex flex-col">
         <header className="bg-primary py-6 mb-8">
           <div className="container mx-auto px-4 text-center text-white">
-            <h1 className="text-3xl font-bold mb-2">
+            <h1 className="text-5xl font-bold mb-2 font-christmas">
               Merry Christmas Boopadoop! 🎄
             </h1>
           </div>
@@ -23,7 +23,7 @@ export default function Layout({ children }: LayoutProps) {
         <main className="container mx-auto px-4 pb-8 flex-grow bg-background">
           {children}
         </main>
-        <footer className="bg-primary text-foreground-alt text-center py-4">
+        <footer className="bg-primary text-foreground-alt text-center py-4 font-christmas">
           <p>&copy; 2024 Doop Christmas Vacations Limited. All rights reserved.</p>
         </footer>
       </div>

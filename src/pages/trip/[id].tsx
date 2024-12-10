@@ -15,7 +15,7 @@ export default function TripPage() {
       <Layout>
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Trip not found</h1>
-          <Link href="/" className="text-blue-500 hover:underline">
+          <Link href="/" className="text-secondary hover:underline font-christmas text-bold">
             Return to homepage
           </Link>
         </div>
@@ -26,7 +26,7 @@ export default function TripPage() {
   return (
     <Layout>
       <div className="space-y-6">
-        <Link href="/" className="inline-flex items-center text-blue-500 hover:underline">
+        <Link href="/" className="inline-flex items-center text-secondary hover:underline font-christmas text-bold">
           <FaArrowLeft className="mr-2" /> Back to All Trips
         </Link>
         <TripDetails {...trip} />

@@ -65,20 +65,20 @@ export default function TripDetails({ title, image, flights, hotel, activities }
           className="w-full h-full object-cover rounded-lg"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-lg" />
-        <h1 className="absolute bottom-6 left-6 text-4xl font-bold text-white">
+        <h1 className="absolute bottom-6 left-6 text-4xl font-bold text-light">
           {title}
         </h1>
-        <div className="absolute bottom-6 right-6 text-2xl font-bold text-white">
+        <div className="absolute bottom-6 right-6 text-2xl font-bold text-light">
           Total: ${totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
         </div>
       </div>
 
-      <div className="bg-white rounded-lg shadow-md p-6">
+      <div className="bg-light rounded-lg shadow-md p-6">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-semibold flex items-center">
+          <h2 className="text-2xl font-semibold flex items-center font-christmas">
             <FaPlane className="mr-2" /> Flight Information
           </h2>
-          <div className="text-xl font-semibold text-green-700">
+          <div className="text-xl font-semibold text-primary">
             ${formatPrice(flights.price)}
           </div>
         </div>
@@ -101,12 +101,12 @@ export default function TripDetails({ title, image, flights, hotel, activities }
           </div>
         </div>
       </div>
-      <div className="bg-white rounded-lg shadow-md p-6">
+      <div className="bg-light rounded-lg shadow-md p-6">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-semibold flex items-center">
+          <h2 className="text-2xl font-semibold flex items-center font-christmas">
             <FaHotel className="mr-2" /> Hotel
           </h2>
-          <div className="text-xl font-semibold text-green-700">
+          <div className="text-xl font-semibold text-primary">
             ${formatPrice(hotel.price)}
           </div>
         </div>
@@ -127,7 +127,7 @@ export default function TripDetails({ title, image, flights, hotel, activities }
                 href={hotel.link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800 underline"
+                className="text-secondary hover:text-primary underline"
               >
                 {hotel.name}
               </a>
@@ -137,8 +137,8 @@ export default function TripDetails({ title, image, flights, hotel, activities }
           </div>
         </div>
       </div>
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-2xl font-semibold mb-4 flex items-center">
+      <div className="bg-light rounded-lg shadow-md p-6">
+        <h2 className="text-2xl font-semibold mb-4 flex items-center font-christmas">
           <FaListUl className="mr-2" /> Key Activities
         </h2>
         <div className="max-w-3xl mx-auto">

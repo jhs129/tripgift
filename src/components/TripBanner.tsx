@@ -18,7 +18,7 @@ export function TripBanner({ id, title, image }: TripBannerProps) {
               style={{ backgroundImage: `url(${image})` }}
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-              <h2 className="text-2xl font-bold text-white">{title}</h2>
+              <h2 className="text-2xl font-bold text-light font-christmas">{title}</h2>
             </div>
           </div>
         </CardContent>
