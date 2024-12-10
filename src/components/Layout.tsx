@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -17,14 +18,16 @@ export default function Layout({ children }: LayoutProps) {
         <header className="bg-primary py-6 mb-8">
           <div className="container mx-auto text-center text-light md:flex md:items-center lg:gap-16">
             <div className="px-4">
-              <Image
-                src="/images/boopmas.png"
-                alt="Boopmas.org"
-                width={125}
-                height={100}
-                className="mx-auto md:mx-0"
-                priority
-              />
+              <Link href="/">
+                <Image
+                  src="/images/boopmas.png"
+                  alt="Boopmas.org"
+                  width={125}
+                  height={100}
+                  className="mx-auto md:mx-0"
+                  priority
+                />
+              </Link>
             </div>
             <h1 className="text-3xl md:text-6xl font-bold mb-2 font-christmas md:block">
               Merry Christmas Boopadoop!
