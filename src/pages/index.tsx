@@ -84,7 +84,7 @@ export default function Home() {
             />
           ))}
         </div>
-        <div className="text-center mt-4 hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</div>
+        <div className="text-center mt-4 hidden">placeholder text here</div>
       </div>
     </Layout>
   )
