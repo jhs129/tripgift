@@ -11,7 +11,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Head>
-        <title>Boopmas.org |A Very Boopadoop Christmas</title>
+        <title>Boopmas.org | A Very Boopadoop Christmas</title>
         <meta name="description" content="A special gift of three weekend trips" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
