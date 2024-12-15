@@ -51,7 +51,7 @@ export default function Layout({ children }: LayoutProps) {
           </div>
         </main>
         <footer className="bg-primary text-foreground-alt text-center py-4 font-christmas">
-          <p>&copy; 2024 Doop Christmas Vacations Limited. All rights reserved.</p>
+          <p>&copy; 2024 Doop Christmas LLC. All rights reserved.</p>
         </footer>
       </div>
     </>
