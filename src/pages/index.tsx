@@ -84,7 +84,7 @@ export default function Home() {
             />
           ))}
         </div>
-        <div className="text-center mt-4">placeholder text here</div>
+        <div className="text-center mt-4 hidden">placeholder text here</div>
       </div>
     </Layout>
   )
