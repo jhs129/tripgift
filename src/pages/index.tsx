@@ -36,10 +36,10 @@ export default function Home() {
     return (
       <Layout>
         <div className="space-y-8 text-center">
-          <h1 className="text-4xl font-bold text-primary">
+          <h1 className="text-4xl font-bold text-primary font-christmas">
          Silly Boopadoop, go back to sleep! Santa is not here yet! 🎅
           </h1>
-          <p className="text-xl">Come back on Christmas Day or enter the double secret password:</p>
+          <p className="text-xl font-christmas">Come back on Christmas Day or enter the double secret password:</p>
           
           <form onSubmit={handlePasswordSubmit} className="max-w-sm mx-auto space-y-4">
             <input
