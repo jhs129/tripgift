@@ -75,7 +75,7 @@ export default function TripDetails({
 
   return (
     <div className="space-y-8">
-      <section className="relative w-full h-[600px] overflow-hidden">
+      <section className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
         <div className="relative w-full h-full">
           {/* Video Background */}
           <div className="absolute inset-0">
@@ -97,7 +97,7 @@ export default function TripDetails({
           {/* Title Overlay - Moved to bottom left */}
           <div className="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black/60 to-transparent">
             <div className="max-w-4xl">
-              <h1 className="text-5xl font-bold font-christmas text-white">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-christmas text-white">
                 {title}
               </h1>
             </div>

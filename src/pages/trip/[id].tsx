@@ -27,7 +27,7 @@ export default function TripPage() {
     <Layout>
       <div className="space-y-6">
         <Link href="/" className="inline-flex items-center text-secondary hover:underline font-christmas text-bold">
-          <FaArrowLeft className="mr-2" /> Back to All Trips
+          <FaArrowLeft className="mr-2" /> Back
         </Link>
         <TripDetails {...trip} />
       </div>
