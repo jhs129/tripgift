@@ -3,8 +3,6 @@ export const trips = [
     id: "vegas",
     title: "What Happens in Vegas",
     image: "/images/vegas-hero.webp",
-    videoUrl:
-      "https://player.vimeo.com/video/445341817?background=1&autoplay=1&muted=1&controls=0&loop=1&app_id=122963",
     description: "...stays in Vegas.",
     flights: {
       outbound: {
