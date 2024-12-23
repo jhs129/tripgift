@@ -1,47 +1,52 @@
-import { useState, useEffect, useMemo } from 'react'
-import Layout from '../components/Layout'
-import TripCard from '../components/TripCard'
-import { trips } from '../content/trips'
+import { useState, useEffect, useMemo } from "react";
+import Layout from "../components/Layout";
+import TripCard from "../components/TripCard";
+import { trips } from "../content/trips";
 
 export default function Home() {
-  const [isAuthorized, setIsAuthorized] = useState(false)
-  const [password, setPassword] = useState('')
-  
-  const RELEASE_DATE = useMemo(() => new Date('2024-12-25'), [])
-  
-  useEffect(() => {
-    const currentDate = new Date()
-    const storedAuth = localStorage.getItem('isAuthorized') === 'true'
-    
-    if (currentDate >= RELEASE_DATE || storedAuth) {
-      setIsAuthorized(true)
-    }
-  }, [RELEASE_DATE])
+  const [isAuthorized, setIsAuthorized] = useState(false);
+  const [password, setPassword] = useState("");
 
-  const calculateTotalPrice = (trip: typeof trips[0]): number => {
-    const flightPrice = parseFloat(trip.flights.price) || 0
-    const hotelPrice = parseFloat(trip.hotel.price) || 0
-    return flightPrice + hotelPrice
-  }
+  const RELEASE_DATE = useMemo(() => new Date("2024-12-25"), []);
+
+  useEffect(() => {
+    const currentDate = new Date();
+    const storedAuth = localStorage.getItem("isAuthorized") === "true";
+
+    if (currentDate >= RELEASE_DATE || storedAuth) {
+      setIsAuthorized(true);
+    }
+  }, [RELEASE_DATE]);
+
+  const calculateTotalPrice = (trip: (typeof trips)[0]): number => {
+    const flightPrice = parseFloat(trip.flights.price) || 0;
+    const hotelPrice = parseFloat(trip.hotel.price) || 0;
+    return flightPrice + hotelPrice;
+  };
 
   const handlePasswordSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (password === 'doop') {
-      setIsAuthorized(true)
-      localStorage.setItem('isAuthorized', 'true')
+    e.preventDefault();
+    if (password === "doop") {
+      setIsAuthorized(true);
+      localStorage.setItem("isAuthorized", "true");
     }
-  }
+  };
 
   if (!isAuthorized) {
     return (
       <Layout>
         <div className="space-y-8 text-center">
           <h1 className="text-4xl font-bold text-primary font-christmas">
-         Silly Boopadoop, go back to sleep! Santa is not here yet! 🎅
+            Silly Boopadoop, go back to sleep! Santa is not here yet! 🎅
           </h1>
-          <p className="text-xl font-christmas">Come back on Christmas Day or enter the double secret password:</p>
-          
-          <form onSubmit={handlePasswordSubmit} className="max-w-sm mx-auto space-y-4">
+          <p className="text-xl font-christmas">
+            Come back on Christmas Day or enter the double secret password:
+          </p>
+
+          <form
+            onSubmit={handlePasswordSubmit}
+            className="max-w-sm mx-auto space-y-4"
+          >
             <input
               type="password"
               value={password}
@@ -58,35 +63,49 @@ export default function Home() {
           </form>
         </div>
       </Layout>
-    )
+    );
   }
 
   return (
     <Layout>
       <div className="space-y-8">
         <h1 className="text-4xl font-bold text-center text-primary font-christmas">
-          Ok, it&apos;s time for the pressence!
+          Ok, it&apos;s time for the presence!
         </h1>
         <div className="text-xl text-center font-christmas">
-          <p>Open each gift with that glint in your eye,
-          pick perfect present, and get ready to fly!
-          Three choices of badulting with your favorite guy!</p>
+          <p>
+            Open this gift with that glint in your eye, your perfect present
+            awaits, and soon we'll fly!<br/>A special badulting adventure with your favorite
+            guy!
+          </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-3">
-          {trips.map((trip) => (
-            <TripCard 
-              key={trip.id} 
-              id={trip.id}
-              title={trip.title}
-              image={trip.image}
-              description={trip.description}
-              totalPrice={calculateTotalPrice(trip)}
-            />
-          ))}
+        <div className="grid gap-6 md:grid-cols-3 place-items-center md:place-content-center">
+          {trips.length === 1 ? (
+            <div className="md:col-start-2">
+              <TripCard
+                key={trips[0].id}
+                id={trips[0].id}
+                title={trips[0].title}
+                image={trips[0].image}
+                description={trips[0].description}
+                totalPrice={calculateTotalPrice(trips[0])}
+              />
+            </div>
+          ) : (
+            trips.map((trip) => (
+              <TripCard
+                key={trip.id}
+                id={trip.id}
+                title={trip.title}
+                image={trip.image}
+                description={trip.description}
+                totalPrice={calculateTotalPrice(trip)}
+              />
+            ))
+          )}
         </div>
         <div className="text-center mt-4 hidden">placeholder text here</div>
       </div>
     </Layout>
-  )
+  );
 }
-
