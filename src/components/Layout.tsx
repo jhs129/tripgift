@@ -27,7 +27,7 @@ export default function Layout({ children }: LayoutProps) {
           }}
         />
         <header className="bg-primary py-6 mb-8">
-          <div className="container mx-auto text-center text-light md:flex md:items-center lg:gap-16">
+          <div className="container mx-auto text-center text-light flex flex-col items-center gap-4 md:gap-6">
             <div className="px-4">
               <Link href="/">
                 <Image
@@ -35,12 +35,11 @@ export default function Layout({ children }: LayoutProps) {
                   alt="Boopmas.org"
                   width={125}
                   height={100}
-                  className="mx-auto md:mx-0"
                   priority
                 />
               </Link>
             </div>
-            <h1 className="text-3xl md:text-6xl font-bold mb-2 font-christmas md:block">
+            <h1 className="text-3xl md:text-6xl font-bold font-christmas">
               Merry Christmas Boopadoop!
             </h1>
           </div>

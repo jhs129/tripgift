@@ -12,16 +12,22 @@ interface TripCardProps {
 
 export default function TripCard({ id, title, image, description, totalPrice }: TripCardProps) {
   const [isUnwrapped, setIsUnwrapped] = useState(false)
+  const [isRotating, setIsRotating] = useState(false)
 
   const handleUnwrap = () => {
-    setIsUnwrapped(true)
+    setIsRotating(true)
+    setTimeout(() => {
+      setIsUnwrapped(true)
+    }, 300)
   }
 
   if (!isUnwrapped) {
     return (
       <div 
         onClick={handleUnwrap}
-        className="bg-background rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 border cursor-pointer"
+        className={`bg-background rounded-lg shadow-md overflow-hidden border cursor-pointer
+          transition-all duration-600 hover:scale-105
+          ${isRotating ? 'rotate-y-180 opacity-0' : ''}`}
       >
         <div className="relative h-48">
           <Image
@@ -40,7 +46,10 @@ export default function TripCard({ id, title, image, description, totalPrice }: 
 
   return (
     <Link href={`/trip/${id}`} className="block">
-      <div className="bg-background rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 border">
+      <div className={`bg-background rounded-lg shadow-md overflow-hidden 
+        transition-all duration-600 hover:scale-105 border
+        ${!isRotating ? 'rotate-y-0' : 'rotate-y-180'}`}
+      >
         <div className="relative h-48">
           <Image
             src={image}
