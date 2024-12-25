@@ -75,8 +75,8 @@ export default function Home() {
         <div className="text-xl text-center font-christmas">
           <p>
             Open this gift with that glint in your eye, your perfect present
-            awaits, and soon we'll fly!<br/>A special badulting adventure with your favorite
-            guy!
+            awaits, and soon we&apos;ll fly!
+            <br />A special badulting adventure with your favorite guy!
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-3 place-items-center md:place-content-center">

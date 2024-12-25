@@ -1,9 +1,9 @@
-import { FaPlane, FaHotel, FaListUl, FaPause, FaPlay } from "react-icons/fa";
+import { FaPlane, FaHotel, FaListUl } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 interface FlightInfo {
   departure: string;
@@ -46,14 +46,11 @@ export default function TripDetails({
   title,
   image,
   videoUrl,
-  videoStartTime,
-  videoEndTime,
   flights,
   hotel,
   activities,
 }: TripDetailsProps) {
-  const totalPrice =
-    (parseFloat(flights.price) || 0) + (parseFloat(hotel.price) || 0);
+
 
   const formatPrice = (price: string) => {
     return parseFloat(price || "0").toLocaleString("en-US", {
@@ -74,8 +71,6 @@ export default function TripDetails({
 
   const hotelSlider = useRef<Slider | null>(null);
   const activitiesSlider = useRef<Slider | null>(null);
-
-  const [isPlaying, setIsPlaying] = useState(true);
 
   return (
     <div className="space-y-4">
@@ -211,7 +206,7 @@ export default function TripDetails({
               </div>
             </div>
           </div>
-          <div className="bg-light rounded-lg shadow-md p-6">
+          <div className="bg-light rounded-lg shadow-md p-6 hidden">
             <h2 className="text-2xl font-semibold mb-4 flex items-center font-christmas">
               <FaListUl className="mr-2" /> Key Activities
             </h2>

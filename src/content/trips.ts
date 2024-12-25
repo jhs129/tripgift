@@ -39,15 +39,11 @@ export const trips = [
         image: "/images/activities/vegas/fountains.webp",
       },
       {
-        text: "Experience a fine dining meal at one of the Bellagio's signature restaurants",
-        image: "/images/activities/vegas/dining.jpeg",
-      },
-      {
         text: "Attend the Cirque du Soleil 'O' show at the Bellagio",
         image: "/images/activities/vegas/cirque.jpg",
       },
       {
-        text: "Try your luck at the Bellagio's world-class casino and sportsbook, especially during March Madness",
+        text: "We could see how much money we could win at the casino",
         image: "/images/activities/vegas/gambling.jpg",
       },
       {
